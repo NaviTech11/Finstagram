@@ -15,7 +15,6 @@ function Landing() {
                 {/* Landing Body */}
 
             </div>
-            <div></div>
 
         </div>
     )
