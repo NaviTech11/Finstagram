@@ -2,14 +2,34 @@
     background-color: #282A34;
     color: #FAF9F9;
     height: 100vh;
+    
 }
 
-.title {
+.sidebar__title {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
     padding: 3rem;
+    font-family: 'Oleo Script', cursive;
+    
 }
 
-.title > img {
+.sidebar__title > .finsta__icon {
     width: 3rem;
+    font-size: 2rem;
+    color: #A117F2;
+}
+
+.sidebar__profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    margin:1.5rem;
+    width: 30%;
+    box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    opacity: .85;
+
 }

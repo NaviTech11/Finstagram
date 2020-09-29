@@ -1,0 +1,46 @@
+.profile {
+    /* display: "flex";
+    justify-content: center;
+    align-items: center; */
+    
+}
+
+
+
+.profile__avatar{
+    margin: 10px auto;
+    border: 3.75px solid #A117F2;
+   
+}
+
+.profile__username > h2 {
+    font-family: 'Oleo Script', cursive;
+    font-weight: 100;
+    color: #C4C4C4;
+    text-align: center;
+}
+
+.profile__username > p {
+    color: #C4C4C4;
+    opacity: .25;
+    text-align: center;
+}
+
+.profile__stats{
+    display: flex; 
+    
+}
+
+.profile__info {
+    margin: 10px auto;
+    padding: 0 10px;
+    justify-content: center; 
+    border-right: 1px solid #C4C4C4
+}
+
+.profile__info > p{
+    font-size: small;
+    color: #C4C4C4;
+    opacity: .25;
+    margin: 2px 0;
+}
