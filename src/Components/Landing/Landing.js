@@ -12,7 +12,7 @@ function Landing() {
 
             <div className="landing__body">
                 
-                {/* Landing Body */}
+                
 
             </div>
             
