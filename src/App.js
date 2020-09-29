@@ -1,18 +1,27 @@
 import React from 'react';
 import './App.css';
-import Landing from './Components/Landing/Landing'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Landing from './Components/Landing/Landing';
+import Messenger from './Components/Messenger/Messenger'
 
 
 function App() {
   return (
-    <div className="app">
+    <Router>
+      <div className="app">
+        <Switch>
+            
+            <Route path="/landing">
+              <Landing />
+            </Route>
+           
+            <Route path="/messenger">
+              <Messenger />
+            </Route>
 
-      <Landing />
-       
-      {/* Messenger */}
-        {/* MessengerSidebar */}
-        {/* Messenger */}
-    </div>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
