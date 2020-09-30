@@ -2,7 +2,13 @@
     background-color: #282A34;
     color: #FAF9F9;
     width: 30vw;
-    
+    height: 100vh;
+    overflow-x: hidden; 
+    overflow-y: auto;   
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
 }
 
 .sidebar__title {
