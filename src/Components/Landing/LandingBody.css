@@ -1,0 +1,28 @@
+.landing__body{
+    width: 70vw;
+    background-color: #3C3F51;
+    border-radius: 20px 0 0 20px;
+}
+
+.body__search {
+    float: right;
+    display:flex;
+    align-items: center;
+    margin: 10px 5%;
+    width: 30%; 
+    padding: 7px;
+    background-color: #3C3F51;
+    border: 2px solid #30313891;
+    border-radius: 999px;
+}
+
+.body__search > input {
+    border: none;
+    background-color: transparent;
+    outline-width: 0;   
+}
+
+.body__post {
+    width: 60%;
+    border: 1px solid blue;
+}

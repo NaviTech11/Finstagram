@@ -1,0 +1,14 @@
+.post__top {
+    margin: 30px 10px 0 15px;
+}
+
+.post__top > img {
+    border-radius: 15px;
+    width: 100%;
+    
+}
+
+.post__bottom {
+    margin: 0 15px;
+    color: gray;
+}
