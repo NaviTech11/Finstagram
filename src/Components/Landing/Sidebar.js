@@ -40,17 +40,21 @@ function Sidebar() {
                     <Link to="/landing" className="navbar__link">
                         <HomeIcon fontSize="large"/>
                     </Link>
+                    <p>Home</p>
                 </div>
                 <div className="navbar__option">
                     <Link to="/messenger" className="navbar__link">
                         <SendIcon fontSize="large"/>
                     </Link>
+                    <p>Messages</p>
                 </div>
                 <div className="navbar__option">
                     <ExploreIcon fontSize="large"/>
+                    <p>Explore</p>
                 </div>
                 <div className="navbar__option">
                     <FavoriteBorderIcon fontSize="large"/>
+                    <p>Favorite</p>
                 </div>
             </div>
             
