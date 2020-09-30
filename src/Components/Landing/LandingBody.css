@@ -55,7 +55,6 @@
     opacity: .85;
     overflow-x: hidden; 
     overflow-y: auto; 
-    
 }
 
 .body__storyReel::-webkit-scrollbar {

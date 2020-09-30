@@ -9,8 +9,6 @@ function LandingBody() {
     return (
         <div className="landing__body">
             
-           
-            
             <div className="body__post">
                 <Post 
                     avatarSrc="https://lh3.googleusercontent.com/-20KRdi98tlg/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucnQ15iroprPcheP31422eXD80zcVA/s48-c/photo.jpg"
