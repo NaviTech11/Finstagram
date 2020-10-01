@@ -11,26 +11,28 @@ import 'firebase/firestore';
 import 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
-import { SignIn, SignOut } from './Auth';
-import { ChatRoom } from './Room';
 
 const auth = firebase.auth();
 
-function Messenger() {
+function SignIn() {
 
-    const [user] = useAuthState(auth);
-        
-    return (
-        <Grid className="messengerField" xs={6}>
+  const signInWithGoogle = () => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider);
+  }
 
-        <h1>Messenger App</h1>
-        <SignOut />
-        <section>
-            {user ? <ChatRoom /> : <SignIn />}
-        </section>
+  return (
+    <>
+      <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
+    </>
+  )
 
-        </Grid>
-    );
 }
 
-export default Messenger;
+function SignOut() {
+  return auth.currentUser && (
+    <button className="sign-out" onClick={() => auth.signOut()}>Sign Out</button>
+  )
+}
+
+export { SignIn, SignOut };
