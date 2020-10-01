@@ -8,7 +8,7 @@ function Profile({avatarSrc, name, username, followers, following,posts}) {
             
             <Avatar 
                 className="profile__avatar"
-                src={avatarSrc}
+                src={avatarSrc}    
             />
     
             <div className="profile__username">

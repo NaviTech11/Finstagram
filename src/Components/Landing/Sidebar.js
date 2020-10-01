@@ -25,7 +25,7 @@ function Sidebar() {
             {/* Profile */}
             <div className="sidebar__profile">
                <Profile 
-                   avatarSrc="https://lh3.googleusercontent.com/-KAb_q-5rvfw/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmm4RXi5191mqRF0j3dqNRuHxo_dA/s48-c/photo.jpg"
+                   avatarSrc="https://lh3.googleusercontent.com/ogw/ADGmqu-tMGiUa6ofUSuJRP761hkHy1Vp4BOatd7-SFSt=s83-c-mo"
                    name="Ivan Hernandez"
                    username="@ivan.react"
                    followers="1.46K"

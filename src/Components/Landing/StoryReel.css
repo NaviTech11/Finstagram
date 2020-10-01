@@ -4,8 +4,10 @@
     margin: 15px auto;
 }
 
-.storyReel__avatar {
-    border: 3.75px solid #A117F2;
+.storyReel > .storyReel__avatar {
+    border: 3.75px double #A117F2;
     margin-bottom: 25px;
+    height: 4rem;
+    width: 4rem;
     
 }

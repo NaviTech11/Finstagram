@@ -2,24 +2,33 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Landing from './Components/Landing/Landing';
-import Messenger from './Components/Messenger/Messenger'
+import Messenger from './Components/Messenger/Messenger';
+import Login from './Components/Login';
 
 
 function App() {
+  const user = null;
+
   return (
+
     <Router>
       <div className="app">
-        <Switch>
-            
-            <Route path="/landing">
-              <Landing />
-            </Route>
-           
-            <Route path="/messenger">
-              <Messenger />
-            </Route>
+          {!user ? (
+            <Login />
+          ) : (
 
-        </Switch>
+            <Switch>
+                
+                <Route path="/landing">
+                  <Landing />
+                </Route>
+              
+                <Route path="/messenger">
+                  <Messenger />
+                </Route>
+
+            </Switch>
+          )}
       </div>
     </Router>
   );
