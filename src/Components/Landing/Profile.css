@@ -7,10 +7,11 @@
 
 
 
-.profile__avatar{
+.profile > .profile__avatar{
     margin: 10px auto;
     border: 3.75px solid #A117F2;
-   
+    height: 5rem;
+    width: 5rem;
 }
 
 .profile__username > h2 {
