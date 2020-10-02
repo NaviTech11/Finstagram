@@ -15,7 +15,7 @@
     background-color: #282A34;
 }
 
-img {
+.login > .login__container > img {
     width: 7rem;
     height: 7rem;
     border-radius: 1rem;
@@ -25,7 +25,7 @@ img {
 }
 
 
-h1 {
+.login > .login__container > h1 {
     font-family: 'Oleo Script', cursive;
     color: #f4f4f4;
     border-bottom: 4px solid rgba(17, 17, 17, 0.26);
