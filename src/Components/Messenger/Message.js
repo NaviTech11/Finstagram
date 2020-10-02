@@ -9,18 +9,16 @@ const Message = forwardRef(({message, username, photoURL}, ref) => {
         <React.Fragment>
             <div ref={ref} className={`message ${isUser && 'message__user'}`}>
                 <div className={isUser ? "message__sent" : "message__received"}>
-                    <div className={isUser ? "row1" : "row2"}>
-                        <Avatar className="message__avatar" src={message.photoURL} />
-                    </div>
-                    <div>
-                        <Card className={isUser ? "message__userCard" : "message__guestCard"}>
-                            <CardContent>
-                                <Typography color="white" variant="h5" component="h2">
-                                    {message.message} 
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                    </div>
+                    <Avatar className="message__avatar" src={message.photoURL} />
+                </div>
+                <div>
+                    <Card className={isUser ? "message__userCard" : "message__guestCard"}>
+                        <CardContent>
+                            <Typography color="white" variant="h5" component="h2">
+                                {message.message} 
+                            </Typography>
+                        </CardContent>
+                    </Card>
                 </div>
             </div>
         </React.Fragment>

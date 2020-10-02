@@ -24,7 +24,7 @@ function Messenger() {
     return (
         <div>
             <Grid container>
-                <Grid item xs={3}>
+                <Grid className="sb__container" item xs={3}>
                     <MesSidebar />
                 </Grid>
                 <Grid item xs={9}>
