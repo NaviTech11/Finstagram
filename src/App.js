@@ -7,7 +7,7 @@ import Login from './Components/Login';
 
 
 function App() {
-  const user = null;
+  const user = "ivane";
 
   return (
 
