@@ -5,7 +5,7 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import NearMeIcon from '@material-ui/icons/NearMe';
 
-function Post({avatarSrc,name, image}) {
+function Post({avatarSrc,name, image, timestamp}) {
     return (
         <div className="post">
             
@@ -31,6 +31,9 @@ function Post({avatarSrc,name, image}) {
                 </div>
                 <div className="post__option">
                     <NearMeIcon />
+                </div>
+                <div className="post__option">
+                   {/* <p>{timestamp}</p>  */}
                 </div>
                 
             </div>

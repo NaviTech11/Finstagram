@@ -31,7 +31,7 @@
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
-    margin:1.5rem;
+    margin-top:1.5rem;
     box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
     border-radius: 15px;
     opacity: .85;
@@ -42,12 +42,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 
 .navbar__option {
-    padding: 15px 0;
+    padding: 5px 0;
     text-align: center;
     color: gray;
 }
@@ -56,7 +57,7 @@
 }
 .navbar__option--active {
     color: #A117F2; 
-    padding: 15px 0;
+    padding: 5px 0;
     text-align: center;
 
 }
@@ -69,6 +70,23 @@
     color: #A117F2;
 }
 
+form > .image__input {
+    display:flex;
+    align-items: center;
+    margin: 1.5% auto;
+    width: 85%; 
+    padding: 7px;
+    background-color: #3C3F51;
+    border: 2px solid #30313891;
+    border-radius: 999px;
+}
+
+form > .image__input > input {
+    border: none;
+    background-color: transparent;
+    outline-width: 0;  
+}
+
 .sidebar__btn{
     display: flex;
     justify-content: flex-end;
@@ -76,7 +94,7 @@
 }
 
 .sidebar__btn > button{
-    width: 85px;
+    width: 55px;
     height: 45px;
     background-color: #A117F2;
     color: #282A34;

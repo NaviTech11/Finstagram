@@ -8,7 +8,7 @@
 
 .body__post {
     width: 60%;
-    height: 60%;
+    height: 100vh;
     overflow-x: hidden; 
     overflow-y: auto; 
 
@@ -46,7 +46,7 @@
     display:flex;
     justify-content: center;
     width: 10rem;
-    height: 25rem;
+    height: 27rem;
     margin: 1.5% auto;
     margin-top: 6rem;
     background-color: #282A34;

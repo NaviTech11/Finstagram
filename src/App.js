@@ -4,11 +4,12 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Landing from './Components/Landing/Landing';
 import Messenger from './Components/Messenger/Messenger';
 import Login from './Components/Login';
+import { useStateValue } from './StateProvider';
 
 
 function App() {
-  const user = null;
-
+  const [{user}, dispatch] = useStateValue();
+  
   return (
 
     <Router>

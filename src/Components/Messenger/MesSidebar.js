@@ -25,22 +25,22 @@ function MesSidebar() {
     
 
     return (
-        <div className="sidebar">
-            <div className="sidebar__navbar">
-                <div className="navbar__option">
-                    <Link to="/landing" className="navbar__link">
+        <div className="mesSidebar">
+            <div className="mesSidebar__navbar">
+                <div className="mesNavbar__option">
+                    <Link to="/landing" className="mesNavbar__link">
                         <HomeIcon fontSize="large"/>
                     </Link>
                 </div>
-                <div className="navbar__option--active">
-                    <Link to="/messenger" className="navbar__link">
+                <div className="mesNavbar__option--active">
+                    <Link to="/messenger" className="mesNavbar__link">
                         <SendIcon fontSize="large"/>
                     </Link>
                 </div>
-                <div className="navbar__option">
+                <div className="mesNavbar__option">
                     <ExploreIcon fontSize="large"/>
                 </div>
-                <div className="navbar__option">
+                <div className="mesNavbar__option">
                     <FavoriteBorderIcon fontSize="large"/>
                 </div>
             </div>

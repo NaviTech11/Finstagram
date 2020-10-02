@@ -1,35 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './LandingBody.css';
 import Post from './Post';
 import SearchIcon from '@material-ui/icons/Search';
 import StoryReel from './StoryReel';
+import db from "../../firebase";
+import FlipMove from 'react-flip-move';
 
 
 function LandingBody() {
+    const [posts, setPosts] = useState([]);
+    useEffect(() => {
+        db.collection('posts')
+          .orderBy('timestamp', 'desc')
+          .onSnapshot((snapshot) => 
+            setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
+        );
+    }, [])
+
     return (
         <div className="landing__body">
             
             <div className="body__post">
-                <Post 
-                    avatarSrc="https://lh3.googleusercontent.com/-20KRdi98tlg/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucnQ15iroprPcheP31422eXD80zcVA/s48-c/photo.jpg"
-                    name="John Ashburn"
-                    image="https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
-                />
-                <Post 
-                    avatarSrc="https://lh3.googleusercontent.com/-KAb_q-5rvfw/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmm4RXi5191mqRF0j3dqNRuHxo_dA/s48-c/photo.jpg"
-                    name="Ivan Hernandez"
-                    image="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
-                />
-                <Post 
-                    avatarSrc="https://images.unsplash.com/profile-1495780290329-4cc32e29022e?dpr=1&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff"
-                    name="Walter Macedo"
-                    image="https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
-                />
-                <Post 
-                    avatarSrc="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=60"
-                    name="Thomas Kell"
-                    image="https://images.unsplash.com/photo-1526925539332-aa3b66e35444?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-                />
+            <FlipMove>
+                {posts.map((post) => (
+                    <Post
+                        key={post.id}
+                        avatarSrc={post.data.avatarSrc}
+                        name={post.data.username}
+                        image={post.data.image}
+                        // timestamp={post.data.timestamp}
+                    />
+                ))}   
+            </FlipMove>
+
             </div>
 
             <div className="body__right">

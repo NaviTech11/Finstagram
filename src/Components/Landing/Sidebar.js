@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Sidebar.css';
 import Profile from './Profile';
 import { Link } from 'react-router-dom';
@@ -8,11 +8,30 @@ import HomeIcon from '@material-ui/icons/Home';
 import ExploreIcon from '@material-ui/icons/Explore';
 import SendIcon from '@material-ui/icons/Send';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import { IconButton } from "@material-ui/core";
-import AddIcon from "@material-ui/icons/Add";
+import { useStateValue } from '../../StateProvider';
+import firebase from "firebase";
+import db from "../../firebase";
 
 
 function Sidebar() {
+    const [{ user }, dispatch] = useStateValue();
+    const [imageUrl, setImageUrl] = useState('');
+
+    const handleSubmit = event => {
+        event.preventDefault();
+
+        //Database Code
+        db.collection('posts').add({
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            avatarSrc: user.photoURL,
+            username: user.displayName,
+            image: imageUrl
+        })
+
+        //reset Input
+        setImageUrl("")
+    }
+
     return (
         <div className="sidebar">
             {/* Header/Title */}
@@ -25,9 +44,9 @@ function Sidebar() {
             {/* Profile */}
             <div className="sidebar__profile">
                <Profile 
-                   avatarSrc="https://lh3.googleusercontent.com/ogw/ADGmqu-tMGiUa6ofUSuJRP761hkHy1Vp4BOatd7-SFSt=s83-c-mo"
-                   name="Ivan Hernandez"
-                   username="@ivan.react"
+                   avatarSrc={user.photoURL}
+                   name={user.displayName}
+                   username={`@${user.displayName}`}
                    followers="1.46K"
                    following="533"
                    posts="257"
@@ -59,11 +78,22 @@ function Sidebar() {
             </div>
             
             {/* Button */}
-            <div className="sidebar__btn">
-                <Button>
-                    +
-                </Button> 
-            </div>
+            <form action="">
+                <div className="image__input">
+                    <input 
+                        required
+                        value={imageUrl}
+                        onChange={event => setImageUrl(event.target.value)}
+                        placeholder={`Image Url`}
+                    />
+                </div>
+                <div className="sidebar__btn">
+                    <Button onClick={handleSubmit} type="submit">
+                        +
+                    </Button> 
+                </div>
+
+            </form>
             
         </div>
     )
