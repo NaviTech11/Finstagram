@@ -1,26 +1,3 @@
 .messengerField {
   text-align: center;
 }
-
-.messengerForm {
-  padding: 20px;
-  position: fixed;
-  bottom: 0;
-  z-index: 1;
-  background-color: #e9e9eb;
-  width: 90%;
-  margin: 20px;
-}
-
-.formControl {
-  display: flex !important;
-  flex-direction: row !important;
-}
-
-.messengerInput {
-  flex: 1;
-}
-
-.iconButton {
-  flex: 0;
-}

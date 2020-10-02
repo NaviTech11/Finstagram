@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FormControl, Input } from '@material-ui/core';
-import './Messenger.css';
+import './Room.css';
 import Message from './Message';
-import db from './firebase';
+import db from '../../firebase';
 import firebase from 'firebase';
 import FlipMove from 'react-flip-move';
 import SendIcon from '@material-ui/icons/Send';
@@ -60,7 +60,7 @@ function ChatRoom() {
   return (
     <Grid className="messengerField">
       
-      <Grid className="messengerForm" xs={6}>
+      <Grid className="messengerForm" xs={8}>
         <form>
             <FormControl className="formControl">
             <Input className="messengerInput" placeholder='Enter a message...' value={input} onChange={event => setInput(event.target.value)} />

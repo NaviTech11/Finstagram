@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FormControl, Input } from '@material-ui/core';
 import './Messenger.css';
 import Message from './Message';
-import db from './firebase';
+import db from '../../firebase';
 import firebase from 'firebase';
 import FlipMove from 'react-flip-move';
 import SendIcon from '@material-ui/icons/Send';

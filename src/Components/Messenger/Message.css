@@ -11,9 +11,41 @@
 }
 
 .message__userCard {
-    background-color: #0b81ff !important;
+    background-color: #501076 !important;
+    border-radius: 50px 5px 50px 50px !important;
+    color: rgb(200, 200, 200) !important;
+    margin-right: 4rem;
 }
 
 .message__guestCard {
-    background-color: #e9e9eb !important;
+    background-color: #424553 !important;
+    border-radius: 5px 50px 50px 50px !important;
+    color: rgb(200, 200, 200) !important;
+    margin-left: 4rem;
+}
+
+.message__received {
+    display: flex;
+    flex-direction: column;
+}
+
+.message__sent {
+    display: flex;
+    flex-direction: column;
+}
+
+.row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.row2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.message__avatar {
+    height: 4rem !important;
+    width: 4rem !important;
 }
