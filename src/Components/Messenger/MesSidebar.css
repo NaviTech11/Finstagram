@@ -1,0 +1,73 @@
+.mesSidebar {
+    background-color: #3C3F51;
+    color: #FAF9F9;
+    height: 100vh;
+    width: 25vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.mesSidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.mesSidebar__navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    border-bottom: 3px solid grey;
+    box-shadow: 0px 5px 8px -7px rgba(0, 0, 0, 0.75);
+}
+
+.mesNavbar__option {
+    width: 30%;
+    padding: 15px 0;
+    text-align: center;
+    color: gray;
+}
+.mesNavbar__option:hover > .MuiSvgIcon-root {
+    color: #A117F2; 
+}
+.mesNavbar__option--active {
+    color: #A117F2; 
+    width: 30%;
+    padding: 15px 0;
+    text-align: center;
+
+}
+
+.mesNavbar__link {
+    color: gray;
+}
+
+.mesNavbar__link:hover {
+    color: #A117F2;
+}
+
+.sb__conversations {
+    margin: 1.7rem;
+}
+
+.convo__col1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.26rem;
+}
+
+.convo__col2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+.row1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.convo__avatar {
+    height: 2.9rem !important;
+    width: 2.9rem !important;
+}

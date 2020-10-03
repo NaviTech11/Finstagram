@@ -1,0 +1,45 @@
+.post {
+    
+}
+
+.post__top{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 15px;
+}
+
+.post__avatar {
+    border: 3.5px solid #A117F2;
+}
+
+.post__top > p {
+    margin-left: 3px;
+    font-weight: 500;
+    color: gray
+}
+
+.post__middle {
+    margin: 0 10px 0 15px;
+    padding-top: 1rem;
+    
+}
+
+
+.post__middle > img {
+    border-radius: 15px;
+    width: 100%;
+    
+    box-shadow: 0px 5px 8px -7px rgba(0, 0, 0, 0.75);
+  
+}
+
+.post__bottom {
+    display: flex;
+    margin: 0 0 30px 15px;
+    color: gray;
+}
+
+.post__option {
+    margin: 0 5px; 
+}

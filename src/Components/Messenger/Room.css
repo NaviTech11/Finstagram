@@ -1,0 +1,36 @@
+.messengerField {
+  text-align: center;
+  background-color: #282A34;
+  height: 100vh;
+  width: 75vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.messengerField::-webkit-scrollbar {
+  display: none;
+}
+
+.messengerForm {
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  background-color: #303344;
+  width: 90%;
+  margin: 20px;
+}
+
+.formControl {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.messengerInput {
+  flex: 1;
+  color: #FFF !important;
+}
+
+.iconButton {
+  flex: 0;
+}

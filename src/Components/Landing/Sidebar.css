@@ -1,15 +1,20 @@
 .sidebar {
     background-color: #282A34;
     color: #FAF9F9;
+    width: 30vw;
     height: 100vh;
-    
+    overflow-x: hidden; 
+    overflow-y: auto;   
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
 }
 
 .sidebar__title {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
     padding: 3rem;
     font-family: 'Oleo Script', cursive;
     
@@ -26,8 +31,7 @@
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
-    margin:1.5rem;
-    width: 30%;
+    margin-top:1.5rem;
     box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
     border-radius: 15px;
     opacity: .85;
@@ -38,12 +42,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
 }
 
+
 .navbar__option {
-    width: 30%;
-    padding: 15px 0;
+    padding: 5px 0;
     text-align: center;
     color: gray;
 }
@@ -52,8 +57,7 @@
 }
 .navbar__option--active {
     color: #A117F2; 
-    width: 30%;
-    padding: 15px 0;
+    padding: 5px 0;
     text-align: center;
 
 }
@@ -66,22 +70,41 @@
     color: #A117F2;
 }
 
+form > .image__input {
+    display:flex;
+    align-items: center;
+    margin: 1.5% auto;
+    width: 85%; 
+    padding: 7px;
+    background-color: #3C3F51;
+    border: 2px solid #30313891;
+    border-radius: 999px;
+}
+
+form > .image__input > input {
+    border: none;
+    background-color: transparent;
+    outline-width: 0;  
+}
+
 .sidebar__btn{
-    width: 30%;
     display: flex;
     justify-content: flex-end;
+    margin-right: 1.5rem;
 }
 
 .sidebar__btn > button{
-    width: 85px;
+    width: 55px;
     height: 45px;
     background-color: #A117F2;
-    color: white;
+    color: #282A34;
     font-weight: 800;
-    font-size: 1rem;
+    font-size: 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
 }
 
 .sidebar__btn > button:hover {
-    background-color: white;
+    background-color: rgba(29, 32, 46, 0.651);
     color: #A117F2;
 }

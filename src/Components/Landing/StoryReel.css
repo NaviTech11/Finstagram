@@ -1,0 +1,13 @@
+.storyReel > p {
+    color: gray;
+    font-weight: 600;
+    margin: 15px auto;
+}
+
+.storyReel > .storyReel__avatar {
+    border: 3.75px solid #A117F2;
+    margin-bottom: 25px;
+    height: 4rem;
+    width: 4rem;
+    
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Sidebar.css';
 import Profile from './Profile';
 import { Link } from 'react-router-dom';
@@ -8,11 +8,30 @@ import HomeIcon from '@material-ui/icons/Home';
 import ExploreIcon from '@material-ui/icons/Explore';
 import SendIcon from '@material-ui/icons/Send';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import { IconButton } from "@material-ui/core";
-import AddIcon from "@material-ui/icons/Add";
+import { useStateValue } from '../../StateProvider';
+import firebase from "firebase";
+import db from "../../firebase";
 
 
 function Sidebar() {
+    const [{ user }, dispatch] = useStateValue();
+    const [imageUrl, setImageUrl] = useState('');
+
+    const handleSubmit = event => {
+        event.preventDefault();
+
+        //Database Code
+        db.collection('posts').add({
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            avatarSrc: user.photoURL,
+            username: user.displayName,
+            image: imageUrl
+        })
+
+        //reset Input
+        setImageUrl("")
+    }
+
     return (
         <div className="sidebar">
             {/* Header/Title */}
@@ -25,9 +44,9 @@ function Sidebar() {
             {/* Profile */}
             <div className="sidebar__profile">
                <Profile 
-                   avatarSrc="https://lh3.googleusercontent.com/-KAb_q-5rvfw/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmm4RXi5191mqRF0j3dqNRuHxo_dA/s48-c/photo.jpg"
-                   name="Ivan Hernandez"
-                   username="@ivan.react"
+                   avatarSrc={user.photoURL}
+                   name={user.displayName}
+                   username={`@${user.displayName}`}
                    followers="1.46K"
                    following="533"
                    posts="257"
@@ -40,26 +59,41 @@ function Sidebar() {
                     <Link to="/landing" className="navbar__link">
                         <HomeIcon fontSize="large"/>
                     </Link>
+                    <p>Home</p>
                 </div>
                 <div className="navbar__option">
                     <Link to="/messenger" className="navbar__link">
                         <SendIcon fontSize="large"/>
                     </Link>
+                    <p>Messages</p>
                 </div>
                 <div className="navbar__option">
                     <ExploreIcon fontSize="large"/>
+                    <p>Explore</p>
                 </div>
                 <div className="navbar__option">
                     <FavoriteBorderIcon fontSize="large"/>
+                    <p>Favorite</p>
                 </div>
             </div>
             
             {/* Button */}
-            <div className="sidebar__btn">
-                <Button>
-                    +
-                </Button> 
-            </div>
+            <form action="">
+                <div className="image__input">
+                    <input 
+                        required
+                        value={imageUrl}
+                        onChange={event => setImageUrl(event.target.value)}
+                        placeholder={`Image Url`}
+                    />
+                </div>
+                <div className="sidebar__btn">
+                    <Button onClick={handleSubmit} type="submit">
+                        +
+                    </Button> 
+                </div>
+
+            </form>
             
         </div>
     )

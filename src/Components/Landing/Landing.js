@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Landing.css";
 import Sidebar from './Sidebar';
+import LandingBody from './LandingBody'
 
 function Landing() {
     return (
@@ -11,9 +12,8 @@ function Landing() {
             </div>
 
             <div className="landing__body">
+                <LandingBody />
                 
-                {/* Landing Body */}
-
             </div>
 
         </div>
