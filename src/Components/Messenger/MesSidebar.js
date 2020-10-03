@@ -17,7 +17,7 @@ function RenderConversation({conversation}) {
                     <Avatar className="convo__avatar" src={conversation.image} />
                 </div>
                 <div className="convo__col2">
-                    <h2>{conversation.name}</h2>
+                    <h4>{conversation.name}</h4>
                     <p>{conversation.display}</p>
                 </div>
             </div>

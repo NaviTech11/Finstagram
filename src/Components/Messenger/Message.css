@@ -24,13 +24,25 @@
     margin-left: 4rem;
 }
 
+.message__received {
+    display: flex;
+    flex-direction: column;
+}
+
 .message__sent {
     display: flex;
+    flex-direction: column;
+}
+
+.message__row1 {
+    display: flex;
+    flex-direction: row;
     justify-content: flex-end;
 }
 
-.message__received {
+.message__row2 {
     display: flex;
+    flex-direction: row;
 }
 
 .message__avatar {
