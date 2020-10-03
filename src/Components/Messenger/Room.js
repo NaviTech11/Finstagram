@@ -9,9 +9,6 @@ import SendIcon from '@material-ui/icons/Send';
 import { IconButton, Grid } from '@material-ui/core';
 import 'firebase/firestore';
 import 'firebase/auth';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useCollectionData } from 'react-firebase-hooks/firestore';
-import { SignIn, SignOut } from './Auth';
 
 const auth = firebase.auth();
 
@@ -30,11 +27,6 @@ function ChatRoom() {
     });
   }, [] )
 
-  /*useEffect(() => {
-    //run code here
-    //if its black inside [], this code runs ONCE when the app component loads
-    setUsername(prompt('Please enter your name'))
-  }, [] ) //condition*/
 
   const { uid, photoURL, displayName } = auth.currentUser;
   

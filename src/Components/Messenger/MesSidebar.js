@@ -1,13 +1,11 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { Component } from 'react';
 import './MesSidebar.css';
 import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import ExploreIcon from '@material-ui/icons/Explore';
 import SendIcon from '@material-ui/icons/Send';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import { Card, CardContent, Avatar } from '@material-ui/core';
-import db from '../../firebase';
-import firebase from 'firebase';
+import { Avatar } from '@material-ui/core';
 import { CONVERSATIONS } from './conversations';
 
 
@@ -34,16 +32,6 @@ class MesSidebar extends Component {
             conversations: CONVERSATIONS
         };
     }
-
-    /*const [conversations, setConversations] = useState([]);
-
-    useEffect(() => {
-        db.collection('messages').onSnapshot(snapshot => {
-          setConversations(snapshot.docs.map(doc => ({id: doc.id, message: doc.data()})))
-        });
-      }, [] )
-
-    const userConv = conversations.filter(conv => conv.id === "kyIbYwakEHuxzBOIGNuc" || "oiqjCuj5j7Vc5zD0mQ8F").map()*/
     
     render() {
 
@@ -54,22 +42,22 @@ class MesSidebar extends Component {
         })
 
         return (
-            <div className="sidebar">
-                <div className="sidebar__navbar">
-                    <div className="navbar__option">
-                        <Link to="/landing" className="navbar__link">
+            <div className="mesSidebar">
+                <div className="mesSidebar__navbar">
+                    <div className="mesNavbar__option">
+                        <Link to="/landing" className="mesNavbar__link">
                             <HomeIcon fontSize="large"/>
                         </Link>
                     </div>
-                    <div className="navbar__option--active">
-                        <Link to="/messenger" className="navbar__link">
+                    <div className="mesNavbar__option--active">
+                        <Link to="/messenger" className="mesNavbar__link">
                             <SendIcon fontSize="large"/>
                         </Link>
                     </div>
-                    <div className="navbar__option">
+                    <div className="mesNavbar__option">
                         <ExploreIcon fontSize="large"/>
                     </div>
-                    <div className="navbar__option">
+                    <div className="mesNavbar__option">
                         <FavoriteBorderIcon fontSize="large"/>
                     </div>
                 </div>
