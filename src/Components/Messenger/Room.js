@@ -7,13 +7,7 @@ import firebase from 'firebase';
 import FlipMove from 'react-flip-move';
 import SendIcon from '@material-ui/icons/Send';
 import { IconButton, Grid } from '@material-ui/core';
-import 'firebase/firestore';
-import 'firebase/auth';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useCollectionData } from 'react-firebase-hooks/firestore';
-import { SignIn, SignOut } from './Auth';
-
-const auth = firebase.auth();
+import {auth} from '../../firebase'
 
 function ChatRoom() {
   const [input, setInput] = useState('');
@@ -40,7 +34,7 @@ function ChatRoom() {
   
   useEffect(() => {
       setUsername(uid)
-  }, [] )
+  }, [])
 
   const sendMessage = (event) => {
       

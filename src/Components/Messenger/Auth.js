@@ -1,6 +1,5 @@
 import React from 'react';
 import './Messenger.css';
-import firebase from 'firebase';
 import 'firebase/firestore';
 import {auth} from '../../firebase'
 

@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { FormControl, Input } from '@material-ui/core';
+import React from 'react';
 import './Messenger.css';
-import Message from './Message';
-import db from '../../firebase';
 import firebase from 'firebase';
 import { Grid } from '@material-ui/core';
 import 'firebase/firestore';
 import 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { SignIn, SignOut } from './Auth';
 import { ChatRoom } from './Room';
 import MesSidebar from './MesSidebar';
+import Login from '../Login';
 
 const auth = firebase.auth();
 
@@ -25,12 +22,9 @@ function Messenger() {
                     <MesSidebar />
                 </Grid>
                 <Grid item xs={9}>
-                    <div className="messengerField">
-
-                    <h1>Messenger App</h1>
-                    <SignOut />
+                    <div className="messengerField2">
                     <section>
-                        {user ? <ChatRoom /> : <SignIn />}
+                        {user ? <ChatRoom /> : <Login />}
                     </section>
 
                     </div>
